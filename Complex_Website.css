@@ -1,0 +1,678 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    min-width: 1280px;
+}
+
+/* 使用弹性盒模型 */
+#main_menu{
+    position: fixed;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 100vh;
+    width: 350px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+#primary{
+    width: 100px;
+    position: relative;
+    background-color: rgb(27, 37, 49);
+}
+
+#primary .item{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 20px;
+}
+
+#primary .item li{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+#primary .bottomAction{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 20px;
+}
+
+#primary .bottomAction ul{
+    display: flex;
+    display: -webkit-flex;
+    padding: 0px 6px ;
+    /* 子元素左右两边根据margin而定，每个子元素之间的间隔是弹性项 */
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+#primary .bottomAction li{
+    width: 16px;
+    height: 16px;
+}
+
+#highlightPri {
+    position: absolute;
+    width: 9px;
+    height: 20px;
+    top: 20px;
+    left: -20px;
+}
+
+nav{
+    width: 250px;
+    position: relative;
+    background-color: rgb(34, 44, 60);
+}
+
+nav #second{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 85%;
+    padding: 30px;
+    overflow: hidden;
+}
+
+nav #second dl{
+    vertical-align: top;
+}
+
+nav #second dt{
+    height: 34px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #5b6779;
+}
+
+nav #second dt a{
+    float: right;
+}
+
+nav #second dd{
+    position: relative;
+    font-size: 14px;
+    line-height: 38px;
+}
+
+nav #second dd .icon{
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background: url(./12_15-assets/Book\ of\ Wisdom.png) left center no-repeat;
+}
+nav #second dd .icon.video{
+    background: url(./12_15-assets/Video\ Camera.png) left center no-repeat;
+}
+nav #second dd .icon.painting{
+    background: url(./12_15-assets/Painting.png) left center no-repeat;
+}
+nav #second dd .icon.chart{
+    background: url(./12_15-assets/Chart.png) left center no-repeat;
+}
+
+nav #second a{
+    color: #b7c0cd;
+    text-decoration: none;
+}
+
+nav #second .last-child{
+    padding-bottom: 15px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #2a3547;
+}
+
+nav #second i.info, nav #second i.warm{
+    position: absolute;
+    top: 9px;
+    right: 0px;
+    width: 28px;
+    height: 20px;
+    line-height: 20px;
+    font-style: normal;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #2399f2;
+}
+
+nav #second i.warm{
+    width: 20px;
+    background-color: #e03d21;
+}
+
+nav #highlightSec{
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    width: 9px;
+    height: 20px;
+}
+
+nav #show_hide{
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    width: 9px;
+    height: 20px;
+}
+
+nav #show_hide:hover{
+    cursor: pointer;
+}
+
+nav .capcity{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 30px;
+    padding-bottom: 23px;
+}
+
+nav .capcity .month{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 13px;
+    color: #fff;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+nav .capcity .bar{
+    position: relative;
+    height: 4px;
+}
+
+nav .bar .outer{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 4px;
+    width: 100%;
+    background-color: #2d3848;
+    border-radius: 2px;
+}
+
+nav .bar .inner{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 4px;
+    width: 20%;
+    background-color: #8769e5;
+    border-radius: 2px;
+}
+
+main{
+    padding-left: 350px;
+    position: relative;
+    width: 100%;
+}
+
+main header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e9ec;
+    z-index: 999;
+}
+
+main header .title{
+    font-size: 24px;
+    padding-left: 30px;
+    line-height: 80px;
+    color: rgb(53, 64, 82);
+}
+
+main header .user-info{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    display: -webkit-flex;
+    padding: 17px 85px;
+    /* background-color: red; */
+}
+
+main .user-info .avatar{
+    position: relative;
+    margin-right: 15px;
+}
+
+main .user-info button{
+    position: absolute;
+    right: 30px;
+    top: 28px;
+    border: none;
+    /* 背景透明 */
+    background: transparent;
+}
+
+main .avatar .status{
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+main .avatar .status .online{
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 3px solid #38a76a;
+    border-radius: 50%;
+}
+
+main .user-info .info .name{
+    display: block;
+    color: rgb(94, 180, 245);
+}
+
+main .info .identity{
+    display: block;
+    color: rgb(225, 225, 225);
+}
+
+main .content{
+    display: flex;
+    color: #585d68;
+}
+
+.content .messages{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 400px;
+    /* background-color: red; */
+}
+
+.content .messages .search{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-aalign-items: center;
+    padding-top: 17px;
+    height: 70px;
+    width: 100%;
+    border-right : 1px solid #e6e9ec;
+    border-bottom : 1px solid #e6e9ec;
+}
+
+.content .search input{
+    width: 90%;
+    height: 36px;
+    padding: 0 3%;
+    line-height: 36px;
+    border: 1px solid #e6e9ec;
+    border-radius: 5px;
+    background: url(./12_15-assets/Search\ icon.png) 97% center no-repeat;
+    outline: none;
+}
+
+.content .messages .list li{
+    height: 130px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e6e9ec;
+}
+
+.content .messages .list li.active{
+    border-left: 3px solid #2399f2;
+}
+
+.content .messages .head{
+    position: relative;
+}
+
+.content .messages .head img{
+    display: inline-block;
+}
+
+.content .messages .head .user{
+    display: inline-block;
+    padding-left: 20px;
+    position: relative;
+    top: -5px;
+}
+
+.content .messages .head .user .name{
+    display: block;
+    position: relative;
+    top: 0px;
+}
+
+.content .messages .head .user .descript{
+    display: block;
+    color: rgb(181, 181, 181);
+    font-size: 14px;
+} 
+
+.content .messages .active .head .user .name{
+    color: rgb(0, 170, 255)
+}
+
+.content .messages .active .point{
+    display: inline-block;
+    background-color: rgb(0, 170, 255);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.content .messages .head .time{
+    display: block;
+    position: relative;
+    float: right;
+    top: 5px;
+    font-size: 14px;
+    color: #7f8fa4;
+}
+
+.content .messages li.active .body{
+    padding-right: 60px;
+}
+
+.content .messages li.active .body .num{
+    display: block;
+}
+
+.content .messages li .body .num{
+    position: absolute;
+    right: 0px;
+    top: 22px;
+    display: none;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    background-color: #2399f2;
+}
+
+.content .messages li .body{
+    position: relative;
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.content .news{
+    /* 完全分配容器所有的空间 */
+    flex: 1;
+}
+
+.content .news .toolbar{
+    display: flex;
+    display: -webkit-flex;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid rgb(230, 233, 236);
+    padding: 18px 20px 22px 30px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.news .toolbar .profile_name{
+    position: relative;
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.news .toolbar .profile_name .point{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 8px;
+    height: 8px;
+    background-color: #28bd3f;
+    border-radius: 50%;
+}
+
+.news .toolbar .tool{
+    display: flex;
+}
+
+.news .toolbar ul{
+    display: flex;
+    height: 32px;
+    border: 1px solid #ced0da;
+    border-radius: 5px;
+    margin-right: 45px;
+}
+
+.news .toolbar ul li{
+    width: 36px;
+    height: 100%;
+    text-align: center;
+    line-height: 32px;
+}
+
+.news .toolbar .page{
+    margin-right: 15px;
+    line-height: 32px;
+}
+
+.news .toolbar .page i{
+    font-style: normal;
+}
+
+/* nth-child表示找到当前元素所有的兄弟元素，从1开始排序 */
+.news .toolbar ul li:nth-child(2){
+    border-left: 1px solid #ced0da;
+    border-right: 1px solid #ced0da;
+}
+
+.news .toolbar .next-prev {
+    margin-right: 0;
+}
+
+.news .toolbar .next-prev li {
+    line-height: 28px;
+}
+
+.news .toolbar .next-prev li:nth-child(2) {
+    border-right: none;
+}
+
+.news .information{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    flex: 1;
+    /* background-color: red; */
+    border-left: 1px solid rgb(230, 233, 236);
+}
+
+.news .information .date{
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.date .hide{
+    display: none;
+}
+
+.date div.time{
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(230, 233, 236);
+}
+
+.date div.time span.week{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #fff;
+    padding: 0px 20px;
+    font-size: 14px;
+    color: #7f8fa4;
+}
+
+.date div.time.new-message{
+    background-color: #a7d6f9;
+}
+
+.date div.time.new-message .week{
+    color: #2399f1;
+}
+
+.information .date ul.list{
+    padding: 26px 26px 10px 26px;
+}
+
+.information .date:nth-child(3) ul.list{
+    padding-bottom: 2px;
+}
+
+
+.information .date:nth-child(3) li:nth-child(1){
+    padding-bottom: 27px;
+}
+
+.information .date ul.list li{
+    padding-right: 31px;
+    padding-bottom: 19px;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.information .date:nth-child(3) ul.list li:nth-child(2){
+    padding-right: 0px;
+}
+
+.information .date ul.list li img{
+    width: 46px;
+    height: 46px;
+    margin-right: 20px;
+}
+
+.information .date li .name{
+    font-size: 16px;
+    line-height: 28px;
+    margin-right: 20px;
+}
+
+.information .date li .time{
+    font-size: 14px;
+    line-height: 28px;
+    color: #7f8fa4;
+}
+
+.information .date li .descript{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.information .date li .pic-list{
+    padding: 13px 0px;
+    padding-bottom: 0px;
+}
+
+.information .date li .pic-list li{
+    position: relative;
+    width: 156px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 13px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+.information .date li .pic-list li .mask{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.information .date li .pic-list li:hover .mask{
+    display: block;
+}
+
+.information .date li .pic-list li img{
+    width: 100%;
+    height: 100%;
+}
+
+.information .date li .pic-list li .mask::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    transform: translateX(-50%) translateY(-50%);
+    background: url(./12_15-assets/Magnifier.png) center no-repeat;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.information .date li.add-message .add{
+    height: 54px;
+    width: 54px;
+    color: rgb(159, 169, 186);
+    font-size: 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ced0da;
+    border-right: none;
+    background-color: rgb(251, 252, 253);
+}
+
+.information .date li.add-message input{
+    flex: 1;
+    height: 54px;
+    padding-left: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #ced0da;
+    background-color: #fff;
+    color: #585d68;
+    font-size: 14px;
+    outline: none;
+}
