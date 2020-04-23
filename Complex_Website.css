@@ -330,7 +330,43 @@ main .content{
     border-bottom : 1px solid #e6e9ec;
 }
 
-.content .search input{
+.content .search .input_search{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    width: 90%;
+    height: 36px;
+    border: 1px solid #e6e9ec;
+    border-radius: 5px;
+}
+
+.content .search .input_search input{
+    display: block;
+    flex: 9;
+    height: 100%;
+    line-height: 36px;
+    padding: 0 2%;
+    outline: none;
+    border: none;
+}
+
+.content .search .input_search button{
+    display: block;
+    flex: 1;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 1s;
+    outline: none;
+    border: none;
+}
+
+.content .search .input_search button:hover{
+    background-color: #e6e9ec;
+}
+
+/* .content .search input{
     width: 90%;
     height: 36px;
     padding: 0 3%;
@@ -339,7 +375,7 @@ main .content{
     border-radius: 5px;
     background: url(./12_15-assets/Search\ icon.png) 97% center no-repeat;
     outline: none;
-}
+} */
 
 .content .messages .list li{
     height: 130px;
@@ -662,6 +698,11 @@ main .content{
     border: 1px solid #ced0da;
     border-right: none;
     background-color: rgb(251, 252, 253);
+    transition: all 1s;
+}
+
+.information .date li.add-message .add:hover{
+    background-color: #ced0da;
 }
 
 .information .date li.add-message input{

@@ -55,6 +55,7 @@ window.onload = function(){
     var width1 = this.parseInt(getStyle(main[0], "width")) + 100;
     var width2 = this.parseInt(getStyle(main[0], "width"));
 
+    // //实现循环点击的另一个方法（设置一个标记加以判断）
     // var label = 1;
     // showHide.onclick = function(){
     //     if(label == 1){
@@ -87,6 +88,18 @@ window.onload = function(){
             showHide.onclick = hide.bind(this); 
         }
     }
+
+    // //————————————————————————————————————————————————————————————————————————————————————————————————
+    // //点击切换active属性
+    // var messages = document.querySelector('.content .messages .list');
+    // var li = messages.getElementsByTagName('li');
+    // for(let i = 0; i < li.length; i++){
+    //     li[i].onclick = function(){
+    //         let active = document.querySelector('.active');
+    //         active.removeAttribute('class');
+    //         this.setAttribute('class', 'active');
+    //     }
+    // }
 }
 
 //————————————————————————————————————————————————————————————————————————————————————————————————————————

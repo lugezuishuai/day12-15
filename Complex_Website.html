@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="Complex_Website.css">
         <link rel="stylesheet" type="text/css" href="reset.css">
         <script type="text/javascript" src="./hideMenu.js"></script>
+        <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.js"></script>
     </head>
 
     <body>
@@ -163,7 +164,10 @@
             <div class="content">
                 <div class="messages">
                     <div class="search">
-                        <input placeholder="Search" type="text">
+                        <div class="input_search">
+                            <input placeholder="Search" type="text">
+                            <button><img src = "12_15-assets/Search icon.png" alt="Search.png"></button>
+                        </div>
                     </div>
                     <div class="list">
                         <ul>
@@ -388,5 +392,7 @@
                 </div>
             </div>           
         </main>
+        <script type="text/javascript" src="./SearchMessages.js"></script>
+        <script type="text/javascript" src="./AddNews.js"></script>
     </body>
 </html>
