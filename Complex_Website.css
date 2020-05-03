@@ -415,7 +415,7 @@ main .content{
 } 
 
 .content .messages .active .head .user .name{
-    color: rgb(0, 170, 255)
+    color: rgb(0, 170, 255);
 }
 
 .content .messages .active .point{

@@ -84,8 +84,10 @@ function initialize(messages){
     function fetchBlob(message){
         let url = '12_15-assets/' + message.image;
         fetch(url).then(function(response){
-            return response.blob();
+            //blob()方法来转换获取响应的原始内容到Blob对象
+            return response.blob();     //返回一个promise对象
         }).then(function(blob){
+            //处理blob对象
             let objectURL = URL.createObjectURL(blob);
             showMessage(objectURL, message);
         }).catch(function(err){
